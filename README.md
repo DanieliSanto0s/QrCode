@@ -7,30 +7,37 @@ Este projeto consiste em uma aplicação desenvolvida em Python utilizando o fra
 ## Estrutura do Projeto
 
 ```
-
-qr-code-project/
-├── main.py              # Arquivo principal do back-end com a rota para geração de QR Codes
-├── index.html           # Página principal da aplicação (front-end)
-├── style.css            # Estilo visual da página
-├── script.js            # Lógica do front-end para consumir a API
-├── img/
-│   ├── fundo.avif       # Imagem de fundo da interface
-│   └── qr-code.png      # Ícone de QR Code usado no título
-└── README.md            # Documentação do projeto
-
-````
+QrCode/
+├── backend/
+│   ├── main.py               # Código principal FastAPI
+│   └── requirements.txt      # Dependências do back-end
+│
+├── frontend/
+│   ├── index.html            # Página principal
+│   ├── style.css             # Estilos da interface
+│   ├── script.js             # Lógica JavaScript
+│   └── img/
+│       ├── fundo.avif        # Imagem de fundo
+│       └── qr-code.png       # Ícone de QR Code
+│
+├── venv/                     # Ambiente virtual (não versionado)
+│
+├── .gitignore                # Ignorar arquivos/pastas desnecessários
+└── README.md                 # Documentação do projeto
+```
 
 ---
 
 ## Tecnologias Utilizadas
 
-- Python 3.12+
-- FastAPI
-- Uvicorn
-- Biblioteca `qrcode` (Python)
-- HTML5
-- CSS3
-- JavaScript
+* Python 3.12+
+* FastAPI
+* Uvicorn
+* Biblioteca `qrcode`
+* Biblioteca `Pillow`
+* HTML5
+* CSS3
+* JavaScript
 
 ---
 
@@ -41,7 +48,7 @@ qr-code-project/
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
-````
+```
 
 2. Crie e ative o ambiente virtual:
 
@@ -58,12 +65,13 @@ venv\Scripts\activate
 3. Instale as dependências:
 
 ```bash
-pip install fastapi uvicorn qrcode
+pip install fastapi uvicorn qrcode Pillow
 ```
 
-4. Execute o servidor:
+4. Navegue até a pasta do back-end e execute o servidor:
 
 ```bash
+cd backend
 uvicorn main:app --reload
 ```
 
@@ -73,7 +81,7 @@ A API estará disponível em:
 http://127.0.0.1:8000
 ```
 
-5. Para abrir a interface do usuário, execute o arquivo `index.html` em um navegador ou utilize a extensão Live Server no Visual Studio Code.
+5. Para abrir a interface do usuário, execute o arquivo `index.html` da pasta `frontend` em um navegador, ou utilize a extensão **Live Server** no Visual Studio Code.
 
 ---
 
@@ -85,9 +93,4 @@ Disciplina: Programação Multiplataforma
 
 ---
 
-> Este projeto foi desenvolvido com finalidade acadêmica, com o objetivo de aplicar na prática os conceitos de APIs REST e integração com front-end utilizando tecnologias.
-
-```
-
----
-
+> Este projeto foi desenvolvido com finalidade acadêmica, com o objetivo de aplicar na prática os conceitos de APIs REST e integração com front-end utilizando tecnologias web.

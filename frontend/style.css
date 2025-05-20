@@ -1,0 +1,115 @@
+:root {
+  --roxo: #b38bfa;
+  --roxo-escuro: #8a4fff;
+  --fundo: #f6f3ff;
+  --texto: #333;
+  --branco: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   background: url('../frontend/img/fundo.avif') no-repeat top center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  background-color: var(--branco);
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(179, 139, 250, 0.2);
+  text-align: center;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 26px;
+  color: var(--roxo-escuro);
+}
+
+.titulo .icone {
+  width: 32px;
+  height: 32px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--roxo);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:disabled {
+  background-color: #d3c7fa;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: var(--roxo-escuro);
+}
+
+#resultado {
+    margin-top: 20px;
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imagemQR {
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#mensagem {
+  margin-top: 10px;
+  color: #e74c3c;
+  font-size: 14px;
+}
+
