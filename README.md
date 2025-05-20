@@ -46,8 +46,8 @@ QrCode/
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/DanieliSanto0s/QrCode.git
+cd QrCode
 ```
 
 2. Crie e ative o ambiente virtual:
