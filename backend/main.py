@@ -13,7 +13,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+# Esse comentário é um teste para a atividade
 class QRRequest(BaseModel):
     content: str
 
