@@ -4,9 +4,6 @@ from pydantic import BaseModel
 import qrcode
 import io
 import base64
-import logging
-
-logging.basicConfig(level=logging.INFO)
 
 app = FastAPI()
 
@@ -16,10 +13,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-@app.on_event("startup")
-async def startup_event():
-    logging.info("Deploy atualizado: modificação no código feita em 05/06")
 
 class QRRequest(BaseModel):
     content: str
