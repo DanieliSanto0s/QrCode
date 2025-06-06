@@ -13,7 +13,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Esse comentário é um teste para a atividade
+print("Deploy atualizado: modificação no código feita em 05/06")
+
 class QRRequest(BaseModel):
     content: str
 
